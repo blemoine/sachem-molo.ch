@@ -1,0 +1,11 @@
+{
+  "name": "sachem-molo.ch",
+  "version": "1.0.0",
+  "description": "blog of Sachem Moloch",
+  "main": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Benoit Lemoine",
+  "license": "WTFPL"
+}
