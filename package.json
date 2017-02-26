@@ -4,6 +4,7 @@
   "description": "blog of Sachem Moloch",
   "main": "",
   "scripts": {
+    "clean": "rm -rf dist target",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Benoit Lemoine",
