@@ -1,12 +1,14 @@
 import * as Vue from 'vue';
 import { Component, Prop } from 'vue-property-decorator';
-
+import './loader.less';
 
 @Component({
     template: `
       <div>
         <slot v-if="result !== null" :result="result"></slot>
-        <div  v-else>LOADER</div>
+        <div  v-else>
+            <span class="glyphicon glyphicon-refresh spinning" ></span>
+        </div>
       </div>
 `
 })
