@@ -2,6 +2,9 @@
     "compilerOptions": {
         "noImplicitAny": true,
         "strictNullChecks": true,
+        "experimentalDecorators": true,
+        "allowSyntheticDefaultImports": true,
+        "emitDecoratorMetadata": true,
         "lib": [
             "DOM",
             "ES5",

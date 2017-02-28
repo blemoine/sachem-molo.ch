@@ -3,15 +3,15 @@ import 'bootstrap/dist/css/bootstrap-theme.css';
 
 import * as Vue from 'vue';
 import { layout } from './layout/layout';
-import { cv } from './cv/cv';
+import { CvPage } from './cv/cvPage';
 
 new Vue({
     el: '#app',
     template: `<layout>
-                 <cv></cv>
+                 <cv-page></cv-page>
                </layout>`,
     components: {
         layout,
-        cv
+        CvPage
     }
 });
