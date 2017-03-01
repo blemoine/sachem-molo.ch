@@ -3,6 +3,6 @@ export interface Cv {
     lastName: string;
     photo: string;
     linkedInUrl: string;
-    twitterUrl: string;
+    twitterHandle: string;
     description: string;
 }

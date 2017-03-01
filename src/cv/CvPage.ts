@@ -1,6 +1,6 @@
 import * as Vue from 'vue';
 import { CvService } from './CvService';
-import { Cv } from './model';
+import { Cv } from './CvModel';
 import { CvDisplay } from './cvDisplay';
 import { Component } from 'vue-property-decorator';
 import { Loader } from '../common/loader';
@@ -8,13 +8,13 @@ import { Loader } from '../common/loader';
 
 @Component({
     template: `
-       <div>
+       <div class="container">
            <h1 class="page-header">Who am I?</h1>
-                 <Loader :promise-for="promiseForCv">
-                    <template scope="props">             
-                       <cv-display :cv="props.result"></cv-display>
-                    </template>
-                </Loader>
+           <Loader :promise-for="promiseForCv">
+                <template scope="props">             
+                   <cv-display :cv="props.result"></cv-display>
+                </template>
+           </Loader>
        </div>
     `,
     components: {
@@ -23,5 +23,5 @@ import { Loader } from '../common/loader';
     }
 })
 export class CvPage extends Vue {
-    public promiseForCv:Promise<Cv> = CvService.find()
+    public promiseForCv: Promise<Cv> = CvService.find();
 }
