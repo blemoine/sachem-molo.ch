@@ -22,7 +22,7 @@ import './cvDisplay.less';
 })
 export class CvDisplay extends Vue {
     @Prop
-    cv: Cv
+    cv: Cv;
 
     get twitterUrl():string {
         return 'https://twitter.com/' + this.cv.twitterHandle;

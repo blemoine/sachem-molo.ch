@@ -25,6 +25,7 @@
     "bootstrap": "^3.3.7",
     "image-webpack-loader": "^3.2.0",
     "vue": "^2.1.10",
-    "vue-property-decorator": "^4.0.0"
+    "vue-property-decorator": "^4.0.0",
+    "vue-router": "^2.3.0"
   }
 }
