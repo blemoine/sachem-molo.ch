@@ -1,5 +1,8 @@
+const webpack = require('webpack');
 const path = require('path');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
+var PROD = process.env.NODE_ENV === 'production';
 
 module.exports = {
     entry: { app: './src/app.ts' },
@@ -80,6 +83,15 @@ module.exports = {
         ]
     },
     plugins: [
-        new ExtractTextPlugin("[name].css")
-    ]
+        new ExtractTextPlugin("[name].css"),
+        new webpack.DefinePlugin({
+            'process.env': {
+                NODE_ENV: '"'+process.env.NODE_ENV+'"',
+            }
+        })
+    ].concat(PROD ? [
+            new UglifyJSPlugin({
+                comments: false,
+            }),
+        ] : [])
 };

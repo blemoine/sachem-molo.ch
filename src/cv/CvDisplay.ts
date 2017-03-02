@@ -6,7 +6,6 @@ import { Cv } from './CvService';
 @Component({
     template: `
        <section class="row">
-                
                <div class="clearfix col-lg-12">
                    <img alt="avatar" :src="cv.photo" class="avatar"/>
                    {{cv.firstName}}  {{cv.lastName}}<br />

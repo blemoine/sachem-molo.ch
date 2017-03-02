@@ -2,7 +2,7 @@ import * as Vue from 'vue';
 import { Navbar } from './navbar';
 import { Sidebar } from './sidebar';
 
-export const Layout:Vue.ComponentOptions<{} & Vue> = {
+export const Layout: Vue.ComponentOptions<{} & Vue> = {
     template: `
         <div class="page">
         <navbar></navbar>

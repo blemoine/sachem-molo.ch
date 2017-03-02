@@ -1,31 +1,34 @@
 {
-  "name": "sachem-molo.ch",
-  "version": "1.0.0",
-  "description": "blog of Sachem Moloch",
-  "main": "",
-  "scripts": {
-    "clean": "rm -rf dist target",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Benoit Lemoine",
-  "license": "WTFPL",
-  "devDependencies": {
-    "css-loader": "^0.26.2",
-    "extract-text-webpack-plugin": "^2.0.0",
-    "file-loader": "^0.10.1",
-    "less": "^2.7.2",
-    "less-loader": "^2.2.3",
-    "style-loader": "^0.13.2",
-    "ts-loader": "^2.0.1",
-    "typescript": "^2.2.1",
-    "url-loader": "^0.5.8",
-    "webpack": "^2.2.1"
-  },
-  "dependencies": {
-    "bootstrap": "^3.3.7",
-    "image-webpack-loader": "^3.2.0",
-    "vue": "^2.1.10",
-    "vue-property-decorator": "^4.0.0",
-    "vue-router": "^2.3.0"
-  }
+    "name": "sachem-molo.ch",
+    "version": "1.0.0",
+    "description": "blog of Sachem Moloch",
+    "main": "",
+    "scripts": {
+        "clean": "rm -rf dist target",
+        "watch": "./node_modules/.bin/webpack --watch",
+        "dist": "NODE_ENV=production ./node_modules/.bin/webpack",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Benoit Lemoine",
+    "license": "WTFPL",
+    "devDependencies": {
+        "css-loader": "^0.26.2",
+        "extract-text-webpack-plugin": "^2.0.0",
+        "file-loader": "^0.10.1",
+        "less": "^2.7.2",
+        "less-loader": "^2.2.3",
+        "style-loader": "^0.13.2",
+        "ts-loader": "^2.0.1",
+        "typescript": "^2.2.1",
+        "uglifyjs-webpack-plugin": "^0.2.2",
+        "url-loader": "^0.5.8",
+        "webpack": "^2.2.1"
+    },
+    "dependencies": {
+        "bootstrap": "^3.3.7",
+        "image-webpack-loader": "^3.2.0",
+        "vue": "^2.1.10",
+        "vue-property-decorator": "^4.0.0",
+        "vue-router": "^2.3.0"
+    }
 }
