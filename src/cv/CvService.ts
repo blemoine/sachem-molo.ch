@@ -1,4 +1,11 @@
-import { Cv } from './CvModel';
+export interface Cv {
+    firstName: string;
+    lastName: string;
+    photo: string;
+    linkedInUrl: string;
+    twitterHandle: string;
+    description: string;
+}
 
 export const CvService = {
     find: function(): Promise<Cv> {
@@ -11,7 +18,7 @@ export const CvService = {
             description: `I am a fullstack developer who love functional programming. 
                             In my everyday job, I work with Scala / Play Framework for the backend
                             and Angular / TypeScript for frontend.
-                            In the night, I play with Idris or React, and I like to share my knowledge with other people during conferences`, //TODO - parle de prog func, front back et a coté
+                            In the night, I play with Idris or React, and I like to share my knowledge with other people during meetups and conferences.`, //TODO - parle de prog func, front back et a coté
         };
 
         return Promise.resolve(mockCv);

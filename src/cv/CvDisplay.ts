@@ -1,7 +1,7 @@
 import * as Vue from 'vue';
 import { Component, Prop } from 'vue-property-decorator';
-import { Cv } from './CvModel';
 import './cvDisplay.less';
+import { Cv } from './CvService';
 
 @Component({
     template: `

@@ -1,10 +1,8 @@
 import * as Vue from 'vue';
-import { CvService } from './CvService';
-import { Cv } from './CvModel';
+import { CvService, Cv } from './CvService';
 import { CvDisplay } from './CvDisplay';
 import { Component } from 'vue-property-decorator';
 import { Loader } from '../common/loader';
-
 
 @Component({
     template: `

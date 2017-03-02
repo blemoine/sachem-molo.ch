@@ -1,8 +1,8 @@
 import * as Vue from 'vue';
-import { navbar } from './navbar';
-import { sidebar } from './sidebar';
+import { Navbar } from './navbar';
+import { Sidebar } from './sidebar';
 
-export const Layout = {
+export const Layout:Vue.ComponentOptions<{} & Vue> = {
     template: `
         <div class="page">
         <navbar></navbar>
@@ -21,11 +21,8 @@ export const Layout = {
         </footer>
         </div>
     `,
-    data: () => ({
-        message: 'You loaded this page on ' + new Date()
-    }),
-    component: {
-        navbar,
-        sidebar
+    components: {
+        Navbar,
+        Sidebar
     }
 };
