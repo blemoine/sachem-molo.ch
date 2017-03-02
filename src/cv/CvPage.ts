@@ -1,7 +1,7 @@
 import * as Vue from 'vue';
 import { CvService } from './CvService';
 import { Cv } from './CvModel';
-import { CvDisplay } from './cvDisplay';
+import { CvDisplay } from './CvDisplay';
 import { Component } from 'vue-property-decorator';
 import { Loader } from '../common/loader';
 

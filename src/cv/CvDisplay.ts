@@ -10,7 +10,7 @@ import './cvDisplay.less';
                <div class="clearfix col-lg-12">
                    <img alt="avatar" :src="cv.photo" class="avatar"/>
                    {{cv.firstName}}  {{cv.lastName}}<br />
-                   <a :href="twitterUrl">{{cv.twitterHandle}}</a><br />
+                   <a :href="twitterUrl">@{{cv.twitterHandle}}</a><br />
                    <a :href="cv.linkedInUrl">LinkedIn</a>
                </div>
                

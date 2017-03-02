@@ -2,7 +2,7 @@ import * as Vue from 'vue';
 import { navbar } from './navbar';
 import { sidebar } from './sidebar';
 
-export const layout = Vue.component('layout', {
+export const Layout = {
     template: `
         <div class="page">
         <navbar></navbar>
@@ -12,7 +12,7 @@ export const layout = Vue.component('layout', {
                     <sidebar></sidebar>
                 </div>
                 <div class="col-sm-9 col-md-10">
-                    <slot></slot>
+                    <router-view></router-view>
                 </div>
             </div>
         </section>
@@ -28,4 +28,4 @@ export const layout = Vue.component('layout', {
         navbar,
         sidebar
     }
-});
+};
