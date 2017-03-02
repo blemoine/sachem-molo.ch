@@ -2,7 +2,8 @@ const webpack = require('webpack');
 const path = require('path');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
-var PROD = process.env.NODE_ENV === 'production';
+const PROD = process.env.NODE_ENV === 'production';
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     entry: { app: './src/app.ts' },
@@ -86,8 +87,12 @@ module.exports = {
         new ExtractTextPlugin("[name].css"),
         new webpack.DefinePlugin({
             'process.env': {
-                NODE_ENV: '"'+process.env.NODE_ENV+'"',
+                NODE_ENV: '"' + process.env.NODE_ENV + '"',
             }
+        }),
+        new HtmlWebpackPlugin({
+            title: "Moloch's blog",
+            template: './index.html'
         })
     ].concat(PROD ? [
             new UglifyJSPlugin({
