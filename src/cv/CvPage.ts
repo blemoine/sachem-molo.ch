@@ -6,8 +6,8 @@ import { Loader } from '../common/loader';
 
 @Component({
     template: `
-       <div class="container">
-           <h1 class="page-header">Who am I?</h1>
+       <div>
+           <h1 class="page-header">Qui suis je&nbsp;?</h1>
            <Loader :promise-for="promiseForCv">
                 <template scope="props">             
                    <cv-display :cv="props.result"></cv-display>

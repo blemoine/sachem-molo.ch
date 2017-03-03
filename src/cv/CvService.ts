@@ -15,10 +15,11 @@ export const CvService = {
             photo: 'https://www.gravatar.com/avatar/e35b54c02d2c091fd180014a7bb3e5ef',
             linkedInUrl: 'https://www.linkedin.com/in/benoit-lemoine-b63766a0/',
             twitterHandle: 'benoit_lemoine',
-            description: `I am a fullstack developer who love functional programming. 
-                            In my everyday job, I work with Scala / Play Framework for the backend
-                            and Angular / TypeScript for frontend.
-                            In the night, I play with Idris or React, and I like to share my knowledge with other people during meetups and conferences.`, //TODO - parle de prog func, front back et a coté
+            description: `Je suis un developpeur fullstack qui apprécie tout particulièrement la programmation fonctionnelle.
+                            Au quotidien, je travaille principalement avec Scala / Play Framework pour le backend et 
+                            TypeScript / Angular pour le frontend.
+                            Mais quand vient la nuit, j'aime tester de nouvelles technologies comme Idris, Haskell, React ou Vue.
+                         `
         };
 
         return Promise.resolve(mockCv);

@@ -5,13 +5,8 @@ export const Navbar: Vue.ComponentOptions<Vue> = {
         <header class="navbar navbar-inverse">
             <div class="container-fluid">
                 <div class="navbar-header">                 
-                  <a class="navbar-brand" href="#">CV</a>
-                </div>
-                <div id="navbar" class="navbar-collapse collapse">
-                  <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#">Link1</a></li>
-                    <li><a href="#">Link2</a></li>                    
-                  </ul>                  
+                  <a class="navbar-brand" href="#">Moloch's blog</a>
+                </div>                
                 </div>
               </div>
         </header>
