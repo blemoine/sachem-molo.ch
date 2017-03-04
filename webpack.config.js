@@ -5,6 +5,16 @@ const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const PROD = process.env.NODE_ENV === 'production';
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
+function isExternal(mod) {
+    var userRequest = mod.userRequest;
+
+    if (typeof userRequest !== 'string') {
+        return false;
+    }
+
+    return userRequest.indexOf('node_modules') >= 0;
+}
+
 module.exports = {
     entry: { app: './src/app.ts' },
     output: {
@@ -14,7 +24,8 @@ module.exports = {
     resolve: {
         extensions: ['.ts', '.tsx', '.js'],
         alias: {
-            'vue$': 'vue/dist/vue.common.js' //Temporary, must precompile templates
+            'vue$': 'vue/dist/vue.common.js', //Temporary, must precompile templates,
+
         }
     },
     module: {
@@ -84,6 +95,7 @@ module.exports = {
         ]
     },
     plugins: [
+        new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /en|fr/),
         new ExtractTextPlugin("[name].css"),
         new webpack.DefinePlugin({
             'process.env': {
@@ -93,10 +105,17 @@ module.exports = {
         new HtmlWebpackPlugin({
             title: "Moloch's blog",
             template: './index.html'
-        })
-    ].concat(PROD ? [
-            new UglifyJSPlugin({
-                comments: false,
-            }),
-        ] : [])
+        }),
+        new webpack.optimize.CommonsChunkPlugin({
+            name: 'vendors',
+            filename: 'vendors.js',
+            minChunks: function(module) {
+                return isExternal(module);
+            }
+        }),
+        new UglifyJSPlugin({
+            comments: false,
+            exclude: PROD ? undefined : 'app.js'
+        }),
+    ]
 };
