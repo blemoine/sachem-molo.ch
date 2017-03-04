@@ -7,8 +7,12 @@ Vue.use(VueRouter);
 
 export const router = new VueRouter({
     routes: [
-        {path: '/', component: Layout, children: [
+        {
+            path: '/', component: Layout, children: [
+            { path: '', redirect: '/cv' },
             { path: '/cv', component: CvPage },
-        ]},
+        ]
+        },
+
     ]
 });
