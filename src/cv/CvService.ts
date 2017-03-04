@@ -8,7 +8,7 @@ export interface Cv {
 }
 
 export const CvService = {
-    find: function(): Promise<Cv> {
+    find(): Promise<Cv> {
         const mockCv = {
             firstName: 'Benoit',
             lastName: 'Lemoine',
