@@ -1,4 +1,5 @@
-import moment = require('moment');
+import * as moment from 'moment';
+
 export interface Post {
     id: string;
     date: moment.Moment
