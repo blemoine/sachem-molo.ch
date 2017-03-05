@@ -6,7 +6,7 @@ import { PostsService } from './PostsService';
 @Component({
     template: `
     <section class="post-wrapper">
-        <h2>{{formattedDate}} - {{post.title}}</h2>
+        <h2><router-link :to="'/post/'+post.id">{{formattedDate}} - {{post.title}}</router-link></h2>
         <div v-html="excerpt">
         </div>
     </section>

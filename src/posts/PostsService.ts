@@ -7,6 +7,10 @@ export const PostsService = {
         return Promise.resolve(posts);
     },
 
+    findById(id: string): Promise<Post> {
+        return Promise.resolve(posts.find(p => p.id === id))
+    },
+
     excerpt(post: Post): string {
         if (post.text) {
             const firstParagraphEndIdx = post.text.indexOf("</p>");
