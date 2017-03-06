@@ -12,7 +12,7 @@ export const Layout: Vue.ComponentOptions<{} & Vue> = {
                    <sidebar></sidebar>
                 </div>
                 <div class="col-sm-9 col-md-10">
-                    <router-view></router-view>
+                    <router-view :key="$route.fullPath"></router-view>
                 </div>
             </div>
         </section>
