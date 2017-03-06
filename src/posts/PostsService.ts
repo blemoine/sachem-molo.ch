@@ -1,5 +1,12 @@
-import moment = require('moment');
-import { Post, posts } from './posts';
+import * as moment from 'moment';
+import { posts } from './posts';
+
+export interface Post {
+    id: string;
+    date: moment.Moment
+    title: string;
+    text: string;
+}
 
 export const PostsService = {
 

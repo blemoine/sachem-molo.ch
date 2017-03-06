@@ -1,6 +1,6 @@
 import * as Vue from 'vue';
 import { Component, Prop } from 'vue-property-decorator';
-import { Post } from '../posts';
+import { Post } from '../PostsService';
 
 @Component({
     template: `

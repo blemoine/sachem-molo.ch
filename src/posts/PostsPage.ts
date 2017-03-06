@@ -1,8 +1,7 @@
 import * as Vue from 'vue';
 import { Component } from 'vue-property-decorator';
-import { PostsService } from './PostsService';
+import { PostsService, Post } from './PostsService';
 import { Loader } from '../common/loader';
-import { Post } from './posts';
 import { PostDisplay } from './PostDisplay';
 
 @Component({

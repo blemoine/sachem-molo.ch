@@ -1,9 +1,8 @@
 import * as Vue from 'vue';
 import { Component, Prop } from 'vue-property-decorator';
-import { PostsService } from '../PostsService';
+import { PostsService, Post } from '../PostsService';
 import { Loader } from '../../common/loader';
 import { PostDetailDisplay } from './PostDetailDisplay';
-import { Post } from '../posts';
 
 @Component({
     template: `
